@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #0a74da; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Modificación para alinear el contenido dentro del div .logo */
+header .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+}
+
+header .logo i {
+    font-size: 2.5em; /* Ajusta el tamaño del ícono si es necesario */
+    background-color: rgb(12, 182, 83);
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px; /* Espacio entre el ícono y el texto */
+    transition: transform 0.3s ease;
+    
+}
+
+
+header .logo h1 {
+    font-size: 1.6em;
+    margin: 0;
+    color: white;
+}
+
+header .logo p {
+    font-size: 0.9em;
+    color: #a0d7ff;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #007bff;
+    
+    transform: scale(1.05);
+}
+
+.about {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 50px;
+    background-image: url('https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif'); /* Coloca aquí la ruta de tu GIF */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+    z-index: 1;
+}
+
+.about .image, .about .text {
+    position:static;
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo y la capa */
+}
+
+.about .image img {
+    border-radius:60%;
+
+    width: 200px;
+    height: 200px;
+}
+
+.about .text {
+    max-width: 600px;
+}
+
+.about .text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #32e0c4;
+}
+
+
+
+
+/* Redes Sociales*/
+.social-box {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Azul del box */
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50px;
+    z-index: 1;
+}
+
+.social-box i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.social-box i:hover {
+    color: #ffdf00; /* Efecto hover: Cambia a amarillo */
+}
+
+/* Ajuste para el icono individual */
+.social-box a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+footer a:hover {
+    color: #22c55e;
+    transform: scale(1.1);
+}
+/* Pie de página */
+footer {
+    background-color: #0a74da;
+    color: #fcfcfc;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+footer .footer-left h3 {
+    margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+footer .footer-right p {
+    margin-bottom: 10px;
+    animation: fadeInRight 1s ease-out;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+
+/* Animación para elementos del footer */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Social Icons */
+footer .footer-right a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* Efecto de hover para el botón de contacto */
+footer .cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a25be;
+    color: #b38ba9;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .cv-button:hover {
+    background-color: rgb(12, 182, 83);
+    color: rgb(253, 253, 253);
+}
+footer .footer-right a:hover {
+    color: #fcfcfc;
+    transform: translateY(-10px); /* Mueve el ícono 5 píxeles hacia arriba */
+    transition: transform 0.3s ease-in-out;
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Envía el contenedor de partículas al fondo */
+}
+#cv {
+    position: relative;
+    z-index: 1; /* Coloca la sección CV sobre las partículas */
+}
+#background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca este fondo por debajo del contenedor de partículas */
+    background: linear-gradient(100deg, #006eff, #daf2ffe8); /* Ejemplo de degradado */
+    animation: backgroundMove 15s infinite; /* Ejemplo de animación */
+}
+
+/* Ejemplo de animación de movimiento de fondo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+/* Intereses y Skills */
+.experiencia-intereses-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.intereses, .skills {
+    width: 48%;
+}
+
+.intereses h3, .skills h3 {
+    font-size: 24px;
+    color: #32e0c4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedor-botones, .cont-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Contenedor principal que organiza las secciones */
+.experiencia-intereses-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre intereses y skills */
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+/* Secciones de intereses y skills */
+.intereses, .skills {
+    width: 48%; /* Ajusta el ancho para que se mantengan en dos columnas */
+}
+
+/* Títulos */
+.intereses h3, .skills h3 {
+    font-size: 24px;
+    color: #00bfa6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor de botones de intereses y skills */
+.contenedor-botones, .cont-botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se muevan a la siguiente línea */
+    gap: 15px; /* Espacio entre los botones */
+    justify-content: space-evenly; /* Distribuye los botones de forma pareja */
+    align-items: center;
+}
+
+/* Estilo de botones de intereses */
+.interes {
+    background-color: #00bfa6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    flex: 0 1 auto; /* Ajusta el tamaño mínimo de los botones */
+    max-width: 150px; /* Evita que los botones se agranden demasiado */
+}
+
+/* Colores diferentes para cada botón de intereses */
+.interes:nth-child(1) { background-color: #FF5733; }
+.interes:nth-child(2) { background-color: #18c5ce; }
+.interes:nth-child(3) { background-color: #8835d6; }
+.interes:nth-child(4) { background-color: #FFB533; }
+.interes:nth-child(5) { background-color: #98b825; }
+.interes:nth-child(6) { background-color: #FF3333; }
+.interes:nth-child(7) { background-color: #FF33FF; }
+.interes:nth-child(8) { background-color: #3357FF; }
+.interes:nth-child(9) { background-color: #FF5733; }
+.interes:nth-child(10) { background-color: #FF33A1; }
+.interes:nth-child(11) { background-color: #bf0086; }
+.interes:nth-child(12) { background-color: #FFA500; }
+.interes:nth-child(13) { background-color: #9933FF; }
+
+/* Estilo de botones de skills */
+.skill {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    flex: 0 1 auto; /* Ajusta el tamaño mínimo de los botones */
+    max-width: 150px; /* Evita que los botones se agranden demasiado */
+}
+
+/* Colores diferentes para cada botón de skills */
+.skill:nth-child(1) { background-color: #8548b1; }
+.skill:nth-child(2) { background-color: #FF4500; }
+.skill:nth-child(3) { background-color: #20B2AA; }
+.skill:nth-child(4) { background-color: #FF69B4; }
+.skill:nth-child(5) { background-color: #32CD32; }
+.skill:nth-child(6) { background-color: #0d36be; }
+.skill:nth-child(7) { background-color: #FF6347; }
+.skill:nth-child(8) { background-color: #FFD700; }
+.skill:nth-child(9) { background-color: #115be4; }
+.skill:nth-child(10) { background-color: #DC143C; }
+.skill:nth-child(11) { background-color: #401196; }
+/* Efectos hover */
+.interes:hover, .skill:hover {
+    background: linear-gradient(100deg, #ddf0fae8, #69abbe, #ddf0fae8);
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0a74da;
+}
+/* Contenedor para Recursos Software y Herramientas lado a lado */
+.skills-tools-container {
+    display: flex; /* Usamos flex para que los hijos se alineen en fila */
+    justify-content: space-between; /* Espacio entre las secciones */
+    gap: 0px; /* Espacio entre ambas secciones */
+}
+
+/* Sección de Recursos Software */
+.skills-section {
+    padding: 30px; /* Ajusta el padding según sea necesario */
+    background-color: #fff;
+    border-bottom: 3px solid #00bfa6; /* Cambia el borde a solo abajo */
+    border-top: 3px solid transparent; /* Borde superior transparente para que no sea visible */
+    width:60%;
+}
+
+
+
+/* Contenedor general de skills */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espacio entre los items de habilidades */
+    
+}
+
+/* Contenedor de herramientas */
+.tools-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre los items de herramientas */
+    justify-content: center; /* Centra los elementos de herramientas */
+}
+
+
+
+/* Barra de progreso (skills-section) */
+.skills-section {
+    padding: 20px;
+    background-color: #fff;
+    border-top: 3px solid #00bfa6;
+    border-bottom: 3px solid #00bfa6;
+    margin-top: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #32e0c4;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor general de skills */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cada skill item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    background: #e9eff8;
+    transform: scale(1.02);
+}
+
+/* Información de cada skill */
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Barra de progreso */
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00bfa6);
+    width: 0; /* Ancho inicial, la animación lo ajustará */
+    transition: width 1.5s ease;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Animación para llenar las barras después de un tiempo */
+.skill-progress-filled {
+    width: 85%; /* Ajusta el porcentaje según el nivel de habilidad */
+}
+
+/* Sección de Herramientas que manejo */
+.tools-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 60px;
+}
+
+/* Título de la sección */
+.tools-section .section-title h2 {
+    font-size: 35px;
+    color: #32e0c4;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+/* Contenedor de herramientas */
+
+.tools-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Item de herramientas (mejorado) */
+.tool-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-item:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de destello en hover */
+.tool-item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.5s;
+}
+
+.tool-item:hover:after {
+    left: 100%;
+}
+
+.tool-item span {
+    font-weight: 500;
+    text-align: center;
+    display: block;
+}

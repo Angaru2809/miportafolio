@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #0a74da; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+}
+
+header .logo i {
+    font-size: 2.5em; 
+    background-color: rgb(12, 182, 83);
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px; 
+    transition: transform 0.3s ease;
+}
+
+header .logo h1 {
+    font-size: 1.6em;
+    margin: 0;
+    color: white;
+}
+
+header .logo p {
+    font-size: 0.9em;
+    color: #a0d7ff;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #007bff;
+    
+    transform: scale(1.05);
+}
+
+/* Sección de CV */
+.cv-content h2{
+    text-align: center;
+    font-size: 2em;
+    
+    color: #32e0c4;
+}
+
+.cv-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(120deg, transparent,); /* Degradado inicial */
+    
+    border-radius: 15px;
+    animation: slideIn 1s ease-out;
+    transition: background 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Al hacer hover, cambiará el fondo */
+.cv-content:hover {
+    background: linear-gradient(120deg,transparent ); /* Nuevo degradado en hover */
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cv-section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cv-section:hover {
+    transform: translateY(-10px); /* Efecto de elevación en hover */
+}
+
+.cv-download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a74da; /* Fondo azul principal */
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #084e8a; /* Borde azul más oscuro */
+}
+
+.cv-download-button:hover {
+    background-color: #084e8a; /* Fondo azul más oscuro en hover */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0a74da; /* Borde blanco en hover */
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #0a74da;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .footer-left h3 {
+    margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+footer .footer-right p {
+    margin-bottom: 10px;
+    animation: fadeInRight 1s ease-out;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* Animación para elementos del footer */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Social Icons */
+footer .footer-right a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-right a:hover {
+    color: #fcfcfc;
+    transform: translateY(-10px); /* Mueve el ícono 5 píxeles hacia arriba */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Efecto de hover para el botón de contacto */
+footer .cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a25be;
+    color: #b38ba9;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .cv-button:hover {
+    background-color: rgb(12, 182, 83);
+    color: rgb(253, 253, 253);
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Envía el contenedor de partículas al fondo */
+}
+#cv {
+    position: relative;
+    z-index: 1; /* Coloca la sección CV sobre las partículas */
+}
+#background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Coloca este fondo por debajo del contenedor de partículas */
+    background: linear-gradient(100deg, #ddf0fae8,#01214A, #ddf0fae8); /* Ejemplo de degradado */
+    animation: backgroundMove 15s infinite; /* Ejemplo de animación */
+}
+
+/* Ejemplo de animación de movimiento de fondo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+

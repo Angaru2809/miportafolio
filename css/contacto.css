@@ -1,0 +1,254 @@
+/* estilos.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    height: 150vh;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a74da;
+    
+}
+nav .home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+nav .home-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav .home-button a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.contenedor-textos {
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor-textos h1 {
+    font-size: 4rem; /* Agranda el tamaño de la fuente */
+    font-weight: bold;
+    margin-top: -60px; /* Ajusta este valor para subir el h1 */
+    animation: slideIn 1.5s ease-out; /* Añade animación */
+    transform: translateX(-180px);
+    
+}
+
+/* Definir la animación */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px); /* Empieza desplazado hacia arriba */
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px); /* Termina en su posición original */
+        transform: translateX(-180px);
+    }
+}
+
+.img-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 30%;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* Star a project button */
+
+.center-button {
+    position: absolute;
+    top: 62%;
+    transform: translateY(40%);
+    transform: translateX(-85%);
+}
+
+.center-button a.button-link {
+    padding: 10px 30px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #0a25be; /* Borde azul */
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.center-button a.button-link:hover {
+    background-color: #0a25be;
+    color: #ffffff;
+    border-color: #ffffff; /* Cambia el borde a blanco al hacer hover */
+}
+
+
+/* Sección de contacto sobre fondo blanco, justo debajo de la curva */
+
+.contact-section {
+    background-color: transparent;
+    padding: 50px;
+    position: relative;
+    top: -110px; /* Este valor ajusta la posición justo debajo de la curva */
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor de las dos columnas */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+}
+
+/* Cita alineada a la izquierda */
+.quote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-right: 50px;
+    flex: 1; /* Toma el 50% del espacio disponible */
+    text-align: left;
+    padding-right: 30px; /* Agrega espaciado entre las dos columnas */
+}
+
+/* Texto de contacto alineado a la derecha */
+.contact-text {
+    flex: 1; /* Toma el 50% del espacio disponible */
+    text-align: right;
+}
+
+/* Estilos adicionales para el texto de contacto */
+.contact-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-text ul {
+    list-style-type: none;
+    font-size: 1.1em;
+}
+
+.contact-text ul li {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0a74da;/* Un tono más oscuro para el footer */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    margin: 10px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.footer-left h3 {
+    margin-bottom: 10px;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+}
+
+.footer-right a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.footer-copy {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Botón de contacto en el pie de página */
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a25be;
+    color: #fd0a0a;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #0ab653;
+    color: #fff;
+}
+footer .footer-right a:hover {
+    color: #fcfcfc;
+    transform: translateY(-10px); /* Mueve el ícono 5 píxeles hacia arriba */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

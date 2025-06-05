@@ -1,0 +1,372 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #0a74da; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+}
+
+header .logo i {
+    font-size: 2.5em; 
+    background-color: rgb(12, 182, 83);
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px; 
+    transition: transform 0.3s ease;
+}
+
+header .logo h1 {
+    font-size: 1.6em;
+    margin: 0;
+    color: white;
+}
+
+header .logo p {
+    font-size: 0.9em;
+    color: #a0d7ff;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #007bff;
+    
+    transform: scale(1.05);
+}
+.cv-download-button {
+    display: inline-block; /* Hacer que se comporte como un bloque */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #0a25be; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 25px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    text-align: center; /* Centrar el texto */
+}
+
+.cv-download-button:hover {
+    background-color: #007bff; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Sección de Proyectos */
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los proyectos se ajusten si no caben en una sola fila */
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los proyectos */
+    margin-top: 20px;
+}
+
+.project-card {
+    width: 45%; /* Ajusta el ancho de cada tarjeta para que entren varias en fila */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.cv-download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cv-download-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Ajuste adicional para aumentar la separación del botón */
+.project-card h3, .project-card p {
+    margin-bottom: 20px; /* Espaciado adicional */
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Sección de Certificados */
+#certificados {
+    background-color: #eaf4fc;
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    margin-bottom: 40px; /* Espacio debajo de la sección */
+}
+
+#certificados h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.certificado-column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+.certificado-slider {
+    margin-top: 20px;
+    
+}
+
+
+.certificado-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certificado-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Ajuste adicional para aumentar la separación del botón */
+.certificado-card h3, .certificado-card p {
+    margin-bottom: 20px; /* Espaciado adicional */
+}
+
+.certificado-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/* Ajuste de márgenes entre las secciones */
+#proyectos, #certificados {
+    margin-bottom: 0px; /* Espacio adicional entre secciones */
+    padding: 40px 20px; /* Espaciado interno (padding) para darle aire a los textos dentro de la caja */
+}
+
+/* Ajuste de márgenes y paddings dentro de la sección de Proyectos */
+#proyectos h2 {
+    margin-bottom: 40px; /* Espacio inferior debajo del título de proyectos */
+    color:  #007bff;
+    text-align: center;
+
+    
+}
+
+.project-column {
+    margin-bottom: 30px; /* Aumenta el espaciado entre columnas de proyectos */
+}
+
+/* Ajuste de márgenes y paddings dentro de la sección de Certificados */
+#certificados h2 {
+    margin-bottom: 40px; /* Espacio inferior debajo del título de certificados */
+    color: #007bff;
+}
+
+.certificado-column {
+    margin-bottom: 30px; /* Aumenta el espaciado entre columnas de certificados */
+}
+
+/* Ajuste general de las tarjetas (certificados y proyectos) */
+.project-card, .certificado-card {
+    margin: 20px; /* Espaciado entre tarjetas individuales */
+    padding: 20px; /* Añade espacio interno en las tarjetas */
+}
+
+/* Ajuste del botón y el texto */
+.cv-download-button {
+    margin-top: 40px; /* Espacio adicional entre las secciones y el botón */
+}
+
+
+/* Redes Sociales*/
+.social-box {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Azul del box */
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50px;
+}
+
+.social-box i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.social-box i:hover {
+    color: #ffdf00; /* Efecto hover: Cambia a amarillo */
+}
+
+/* Ajuste para el icono individual */
+.social-box a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+footer a:hover {
+    color: #22c55e;
+    transform: scale(1.1);
+}
+/* Pie de página */
+footer {
+    background-color:  #0a74da;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .footer-left h3 {
+    margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+footer .footer-right p {
+    margin-bottom: 10px;
+    animation: fadeInRight 1s ease-out;
+}
+
+footer .footer-bottom p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* Animación para elementos del footer */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Social Icons */
+footer .footer-right a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-right a:hover {
+    color: #ffffff;
+    transform: rotate(360deg); /* Animación de rotación en hover */
+}
+
+/* Efecto de hover para el botón de contacto */
+footer .cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a25be;
+    color: #b38ba9;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .cv-button:hover {
+    background-color: rgb(12, 182, 83);
+    color: rgb(253, 253, 253);
+}
+footer .footer-right a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-right a:hover {
+    color: #fcfcfc;
+    transform: translateY(-10px); /* Mueve el ícono 5 píxeles hacia arriba */
+    transition: transform 0.3s ease-in-out;
+}
