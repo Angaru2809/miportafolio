@@ -225,7 +225,7 @@ footer .footer-right a {
 footer .cv-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0a25be;
+    background-color: #0924c0;
     color: #b38ba9;
     text-decoration: none;
     border-radius: 25px;
@@ -282,10 +282,17 @@ footer .footer-right a:hover {
     background-color: #f9f9f9;
 }
 
+/* Secciones de intereses y skills */
 .intereses, .skills {
-    width: 48%;
+    width: 48%; /* Ajusta el ancho para que se mantengan en dos columnas */
+    background-color: #e6fffba1; /* Fondo neutro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
 }
 
+/* Títulos */
 .intereses h3, .skills h3 {
     font-size: 24px;
     color: #32e0c4;
@@ -293,105 +300,62 @@ footer .footer-right a:hover {
     text-align: center;
 }
 
-.contenedor-botones, .cont-botones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Contenedor principal que organiza las secciones */
-.experiencia-intereses-container {
-    display: flex;
-    justify-content: space-between; /* Espacio entre intereses y skills */
-    padding: 50px;
-    background-color: #f9f9f9;
-}
-
-/* Secciones de intereses y skills */
-.intereses, .skills {
-    width: 48%; /* Ajusta el ancho para que se mantengan en dos columnas */
-}
-
-/* Títulos */
-.intereses h3, .skills h3 {
-    font-size: 24px;
-    color: #00bfa6;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 /* Contenedor de botones de intereses y skills */
 .contenedor-botones, .cont-botones {
     display: flex;
-    flex-wrap: wrap; /* Permite que los botones se muevan a la siguiente línea */
-    gap: 15px; /* Espacio entre los botones */
-    justify-content: space-evenly; /* Distribuye los botones de forma pareja */
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-/* Estilo de botones de intereses */
-.interes {
-    background-color: #00bfa6;
-    color: #fff;
-    border: none;
+/* Estilo de botones de intereses y skills */
+.interes, .skill {
+    background-color: #007bff; /* Color neutro para botones */
+    color: white;
     padding: 10px 20px;
     border-radius: 30px;
     text-align: center;
     font-size: 14px;
     transition: all 0.3s ease;
-    flex: 0 1 auto; /* Ajusta el tamaño mínimo de los botones */
-    max-width: 150px; /* Evita que los botones se agranden demasiado */
-}
-
-/* Colores diferentes para cada botón de intereses */
-.interes:nth-child(1) { background-color: #FF5733; }
-.interes:nth-child(2) { background-color: #18c5ce; }
-.interes:nth-child(3) { background-color: #8835d6; }
-.interes:nth-child(4) { background-color: #FFB533; }
-.interes:nth-child(5) { background-color: #98b825; }
-.interes:nth-child(6) { background-color: #FF3333; }
-.interes:nth-child(7) { background-color: #FF33FF; }
-.interes:nth-child(8) { background-color: #3357FF; }
-.interes:nth-child(9) { background-color: #FF5733; }
-.interes:nth-child(10) { background-color: #FF33A1; }
-.interes:nth-child(11) { background-color: #bf0086; }
-.interes:nth-child(12) { background-color: #FFA500; }
-.interes:nth-child(13) { background-color: #9933FF; }
-
-/* Estilo de botones de skills */
-.skill {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-align: center;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    flex: 0 1 auto; /* Ajusta el tamaño mínimo de los botones */
-    max-width: 150px; /* Evita que los botones se agranden demasiado */
-}
-
-/* Colores diferentes para cada botón de skills */
-.skill:nth-child(1) { background-color: #8548b1; }
-.skill:nth-child(2) { background-color: #FF4500; }
-.skill:nth-child(3) { background-color: #20B2AA; }
-.skill:nth-child(4) { background-color: #FF69B4; }
-.skill:nth-child(5) { background-color: #32CD32; }
-.skill:nth-child(6) { background-color: #0d36be; }
-.skill:nth-child(7) { background-color: #FF6347; }
-.skill:nth-child(8) { background-color: #FFD700; }
-.skill:nth-child(9) { background-color: #115be4; }
-.skill:nth-child(10) { background-color: #DC143C; }
-.skill:nth-child(11) { background-color: #401196; }
-/* Efectos hover */
-.interes:hover, .skill:hover {
-    background: linear-gradient(100deg, #ddf0fae8, #69abbe, #ddf0fae8);
-    color: #333;
+    flex: 0 1 auto;
+    max-width: 150px;
     cursor: pointer;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    border: 2px solid #0a74da;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
+
+/* Efecto de hover */
+.interes:hover, .skill:hover {
+    background-color: #0056b3; /* Color más oscuro en el hover */
+    transform: scale(1.1); /* Agranda el botón al pasar el cursor */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de destello en hover */
+.interes:after, .skill:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.5s;
+}
+
+.interes:hover:after, .skill:hover:after {
+    left: 100%;
+}
+
+/* Estilo de texto dentro del botón */
+.interes span, .skill span {
+    font-weight: 500;
+    text-align: center;
+    display: block;
+}
+
 /* Contenedor para Recursos Software y Herramientas lado a lado */
 .skills-tools-container {
     display: flex; /* Usamos flex para que los hijos se alineen en fila */
@@ -507,8 +471,8 @@ footer .footer-right a:hover {
     padding: 50px;
     background-color: #f9f9f9;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-top: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 90px;
 }
 
 /* Título de la sección */
