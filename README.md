@@ -2,30 +2,30 @@
 
 ¡Bienvenido a mi portafolio profesional! Este proyecto muestra mi trayectoria como Ingeniera de Software, destacando mis proyectos, habilidades y certificaciones.
 
-## 🚀 Proyectos Destacados
+🚀 Proyectos Destacados
 
-### 1. Sistema CRUD con Laravel y MySQL
+ 1. Sistema CRUD con Laravel y MySQL
 - Sistema completo de gestión CRUD
 - Implementación de funcionalidades para crear, leer, actualizar y eliminar datos
 - [Ver proyecto](https://github.com/Angaru2809/ecobags-juvana)
 
-### 2. E-commerce Urban&Shop
+ 2. E-commerce Urban&Shop
 - Plataforma de comercio electrónico de moda sostenible
 - Investigación de mercado y diseño UX/UI
 - Implementación full-stack con integración de APIs de pago
 - [Ver proyecto](https://github.com/Angaru2809/URBAN-SHOP)
 
-### 3. Diseño Web Responsivo
+3. Diseño Web Responsivo
 - Desarrollo de páginas web adaptativas
 - Enfoque en experiencia de usuario y accesibilidad
 - [Ver proyecto](https://github.com/Angaru2809/FromNowOn)
 
-### 4. Videojuego 2D de Plataformas
+ 4. Videojuego 2D de Plataformas
 - Desarrollado en Unity 2D
 - Implementación de física y animaciones
 - [Jugar ahora](https://angaru2809.itch.io/plataformasfinn)
 
-## 🎓 Certificaciones
+🎓 Certificaciones
 
 - CSS Avanzado
 - Figma - Diseño de Interfaces
@@ -33,7 +33,7 @@
 - Bootcamp de Programación Web (En curso)
 - Técnico de Sistemas - SENA
 
-## 🛠️ Tecnologías
+🛠️ Tecnologías
 
 - HTML5, CSS3, JavaScript
 - Laravel, MySQL
